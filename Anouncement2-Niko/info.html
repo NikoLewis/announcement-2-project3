@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>film info</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Shrikhand" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Unica+One" rel="stylesheet">
+</head>
+<body>
+	<div>
+		<header class="heroimg"></header>
+	</div>
+
+	<nav>
+		<ul>
+			<a href="index.html"><img src="home.png"></a>
+			<a href="info.html"><img src="photoscast.png"></a>
+			<a href="trailer.html"><img src="trailersreviews.png"></a>
+		</ul>	
+	</nav>
+
+
+	<div>
+		<p>A young boy named Kubo must locate a magical suit of armour worn by his late father in order to defeat a vengeful spirit from the past.
+	 	</p>
+	</div>
+
+
+	<div id="slideshow">
+
+	    <div>
+		<img src='kubo1.jpg' class='mySlides'>
+	    <img src='kubo2.jpg' class='mySlides'>
+	    <img src='kubo3.jpg' class='mySlides'>
+	    <img src='kubo4.jpg' class='mySlides'>
+	    <img src='kubo5.jpg' class='mySlides'>
+	    <img src='kubo6.jpg' class='mySlides'>
+	    <img src='kubo7.jpg' class='mySlides'>
+        </div>
+	 
+	</div>
+
+	<div id="pointersdiv">
+		<button class='back-button pointers' onclick="plusDivs(-1)"> ❮</button>
+	    <button class='forward-button pointers' onclick="plusDivs(+1)">❯</button>
+	</div>
+
+    <script>
+	    var slideIndex = 1;
+	    showsDivs(slideIndex);
+	    
+	    function plusDivs(n){
+	      showsDivs(slideIndex += n);
+	    }
+	    
+	    function showsDivs(n){
+	      var i;
+	      var x = document.getElementsByClassName('mySlides');
+
+	      if(n > x.length) {
+	        slideIndex = 1;
+	      }
+	      if(n < 1){
+	        slideIndex = x.length;
+	      }
+	      
+	      var i = 0;
+	      while(i < x.length){
+	      	x[i].style.display = 'none';
+	        i++;
+	      }
+	      x[slideIndex-1].style.display = 'block';
+	      }
+    </script>
+
+
+	 <div class="title"> </div>
+
+	 <div id="table-div">
+		<table>
+		  <tr>
+			<td><h2>Characters</h2></td>
+			<td><h2>Voiced By</h2></td>
+		  </tr>
+		  <tr>
+		    <td>Kubo</td>
+		    <td>Art Parkinson</td>
+		  </tr>
+		  <tr>
+		    <td>Monkey</td>
+		    <td>Charlize Theron</td>
+		    
+		  </tr>
+		  <tr>
+		    <td>Moon King</td>
+		    <td>Ralph Fiennes</td>
+		  </tr>
+		  <tr>
+		    <td>Kameyo</td>
+		    <td>Brenda Vaccaro</td>
+		  </tr>
+		  <tr>
+		    <td>Hashi</td>
+		    <td>Cary-Hiroyuki Tagawa</td>
+		  </tr>
+		  <tr>
+		    <td>Mari</td>
+		    <td>Meyrick Murphy</td>  
+		  </tr>
+		  <tr>
+		    <td>Hosato </td>
+		    <td>George Takei</td>  
+		  </tr>
+		  <tr>
+		    <td>The Sisters</td>
+		    <td>Rooney Mara</td>  
+		  </tr>
+		  <tr>
+		    <td>Beetle </td>
+		    <td>Matthew McConaughey</td>  
+		  </tr>
+		  <tr>
+		    <td>Minae</td>
+		    <td>Minae Noji</td>  
+		  </tr>
+		  <tr>
+		    <td>Aiko</td>
+		    <td>Alpha Takahashi</td>  
+		  </tr>
+		  <tr>
+		    <td>Hino</td>
+		    <td>Laura Miro</td>  
+		  </tr>
+		</table>
+	</div>
+
+</body>
+</html>
